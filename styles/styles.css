@@ -53,8 +53,44 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #2980b9;
+button {
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    transition: all .65s;
+    background: #3498dbd1;
+    border-radius: 5px;
+}
+button:hover,
+button:focus {
+    background-color: #396584;
+    color: #fff;
+}
+
+button:before,
+button:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    background: #396584;
+    z-index: -1;
+    transition: all .35s;
+}
+
+button:before {
+    opacity: 0.5;
+}
+
+button:after {
+    transition-delay: 0.2s;
+}
+
+button:hover:before,
+button:hover:after {
+    top: 0%;
 }
 
 #result {
@@ -67,6 +103,7 @@ button:hover {
 
 #result h2 {
     color: #31536a;
+    justify-content: left;
 }
 
 #result p {
