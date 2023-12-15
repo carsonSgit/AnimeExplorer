@@ -1,0 +1,35 @@
+<!-- 
+    AnimeExplorer uses the Jikan API (https://jikan.moe/) to search for anime listed on MyAnimeList!
+
+    This is a simple web app that allows users to search for anime and get information about them.
+    Often when you are looking up information about a show, you can be met with a mass of information
+        including spoilers, AnimeExplorer is available for you to give the simple & important information
+        about a show!
+
+    The reasoning behind the coding of this simple web app is to refamiliarize myself with querying API's
+        and to put some work into my CSS skills. I have been working on a lot of backend projects recently
+        through school and CSS often gets put on the back-burner, so I decided to code something small to 
+        test out some front-end that would be fitting of a web app that people would like using!
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeExplorer</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <h1>AnimeExplorer</h1>
+
+    <label for="searchInput">Enter Anime Name:</label>
+    <input type="text" id="searchInput" placeholder="e.g., Naruto">
+
+    <button onclick="searchAnime()">Search</button>
+
+    <div id="result"></div>
+</body>
+</html>
