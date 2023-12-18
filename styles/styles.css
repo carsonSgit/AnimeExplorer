@@ -41,7 +41,7 @@ input {
     border: 1px solid #3498db;
     border-radius: 5px;
 }
-
+  
 button {
     display: inline-flex;
     background-color: #3498db;
@@ -104,19 +104,24 @@ button:hover:after {
 #result h2 {
     color: #31536a;
     justify-content: left;
+    margin-right: 30px;
 }
 
 #result p {
-    color: #555;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.9; 
     margin: 10px 0;
 }
 
+
 #result p:first-child {
-    margin-top: 20px;
+    margin-top: 2%;
+    margin-left: 5%;
 }
 
 #result img {
-    width: 40%;
+    width: 190px;
     height: auto;
     border-radius: 5px;
     margin-top: 0;
@@ -138,7 +143,7 @@ button:hover:after {
     justify-content: space-between;
     width: 100%; 
     overflow-x: auto; 
-    white-space: wrap; 
+    white-space: normal;
 }
 
 #topResult {
@@ -154,6 +159,7 @@ button:hover:after {
 #topResult h2 {
     color: #31536a;
     font-size:medium;
+    white-space: pre-line;
 }
 
 #topResult img {
@@ -175,9 +181,21 @@ button:hover:after {
 }
 
 #topResultContainer::-webkit-scrollbar-track {
-    background-color: #95cddb5d;
+    background-color: #95cddb3e;
 }
 
+#pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+#pagination button{
+    padding: 10px 25px;
+    border-radius: 20px;
+}
 
 @media only screen and (max-width: 600px) {
     input, button {
