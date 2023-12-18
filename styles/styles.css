@@ -138,7 +138,7 @@ button:hover:after {
     justify-content: space-between;
     width: 100%; 
     overflow-x: auto; 
-    white-space: nowrap; 
+    white-space: wrap; 
 }
 
 #topResult {
