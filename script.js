@@ -64,8 +64,8 @@ function displayTopShows() {
                 return `
                     <div class="anime-info">
                         <div>
-                            <h2>${title}</h2>
                             <img src="${imageUrl}" alt="Anime Cover">
+                            <h2>${title}</h2>
                         </div>
                     </div>
                 `;

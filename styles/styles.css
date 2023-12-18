@@ -132,6 +132,40 @@ button:hover:after {
     max-width: 50%;
 }
 
+
+#topResultContainer {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+}
+
+#topResult {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#topResult h2 {
+    color: #31536a;
+    font-size:medium;
+}
+
+#topResult img {
+    width: 200px;
+    height: 280px;
+    border-radius: 5px;
+    margin-top: 0;
+    margin-right: 15px; 
+}
+
+
+
 @media only screen and (max-width: 600px) {
     input, button {
         width: 100%;
