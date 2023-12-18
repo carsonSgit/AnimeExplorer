@@ -41,3 +41,55 @@ function searchAnime() {
             document.getElementById('result').innerHTML = 'Error fetching data. Please try again.';
         });
 }
+
+let currentPage = 1; // Track the current page
+
+function displayTopShows() {
+    const topShowsUrl = `https://api.jikan.moe/v4/top/anime?page=${currentPage}`;
+
+    fetch(topShowsUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            const topShowsData = data.data;
+
+            const resultHtml = topShowsData.map(anime => {
+                const title = anime.titles[0]?.title || 'Title not found';
+                const imageUrl = anime.images?.jpg?.image_url || 'Image not found';
+
+                return `
+                    <div class="anime-info">
+                        <div>
+                            <h2>${title}</h2>
+                            <img src="${imageUrl}" alt="Anime Cover">
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('topResult').innerHTML = resultHtml;
+        })
+        .catch(error => {
+            console.error('Error fetching top shows:', error);
+            document.getElementById('topResult').innerHTML = 'Error fetching top shows. Please try again.';
+        });
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        displayTopShows();
+    }
+}
+
+function nextPage() {
+    currentPage++;
+    displayTopShows();
+}
+
+
+document.addEventListener('DOMContentLoaded', displayTopShows);

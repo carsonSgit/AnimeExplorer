@@ -12,13 +12,12 @@
         test out some front-end that would be fitting of a web app that people would like using!
 -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnimeExplorer</title>
+    <title>AnimeExplorer - Top Shows</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -29,13 +28,21 @@
             <li><a href="topShows.html">Top Shows</a></li>
         </ul>
     </nav>
-    <h1>AnimeExplorer</h1>
 
-    <label for="searchInput">Enter Anime Name:</label>
-    <input type="text" id="searchInput" placeholder="e.g., Naruto">
+    <h1>AnimeExplorer - Top Shows</h1>
+    <div id="topResult"></div>
 
-    <button onclick="searchAnime()">Search</button>
+    <div id="pagination">
+        <button onclick="prevPage()">Previous Page</button>
+        <button onclick="nextPage()">Next Page</button>
+    </div>
 
-    <div id="result"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Call displayTopShows when the page is fully loaded
+            displayTopShows();
+        });
+    </script>
 </body>
 </html>
+
