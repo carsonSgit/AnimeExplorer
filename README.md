@@ -15,7 +15,7 @@ of ads, so, with the help of the [Jikan API](https://jikan.moe/), I made a simpl
 
 - Download the .zip
 - Open in your preferred IDE
-- Run the site (I use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension on [VSCode](https://code.visualstudio.com/)
+- Run the site (I use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension on [VSCode](https://code.visualstudio.com/))
 - Simply type in the show you're looking for and click search!
 
 ## Screenshots
