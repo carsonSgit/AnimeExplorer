@@ -45,12 +45,13 @@ function searchAnime() {
 let currentPage = 1; // Track the current page
 
 function displayTopShows() {
-    const topShowsUrl = `https://api.jikan.moe/v4/top/anime?page=${currentPage}`;
+    // Top airing shows (SFW)
+    const topShowsUrl = `https://api.jikan.moe/v4/top/anime?page=${currentPage}&sfw=true&filter=airing`;
 
     fetch(topShowsUrl)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                throw new Error(`HTTP error, Status: ${response.status}`);
             }
             return response.json();
         })
@@ -90,6 +91,5 @@ function nextPage() {
     currentPage++;
     displayTopShows();
 }
-
 
 document.addEventListener('DOMContentLoaded', displayTopShows);
