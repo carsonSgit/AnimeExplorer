@@ -197,6 +197,74 @@ button:hover:after {
     border-radius: 20px;
 }
 
+
+.navbar {
+    margin-top: 18px;
+    margin-left: 42.5%; /* Magic to make navbar Truly centered */
+    margin-right: 45%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.navbar .navitem {
+    display: block;
+}
+
+#navBar {
+    background-color: #31536a;
+    padding: 18px;
+}
+
+#navBar ul {
+    margin: 0;
+    padding: 0;
+}
+
+#navBar ul:first-child {
+    margin-left:12px;
+}
+
+#navBar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#navBar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    position:relative;
+}
+
+#navBar a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #5b9fcc;
+    bottom: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+#navBar a:hover::before{
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+#navBar a:hover {
+    transition: 0.3s;
+    color: #5b9fcc;
+}
+
+#navBar a#active {
+    transition: 0.3s;
+    color: #a0d0f0;
+}
+
+
 @media only screen and (max-width: 600px) {
     input, button {
         width: 100%;
