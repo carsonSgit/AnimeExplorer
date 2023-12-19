@@ -16,6 +16,7 @@ function searchAnime() {
             const scoredBy = animeData?.scored_by || 'Number of scores not available';
             const popularity = animeData?.popularity || 'Popularity not available';
             const imageUrl = animeData?.images?.jpg?.image_url || 'Image not found';
+            const youtubeUrl = animeData?.trailer?.url || animeData?.url; // Default to '#' if no URL is available
             const synopsis = animeData?.synopsis || 'Synopsis not available';
 
             // Display the information in the result div
@@ -23,7 +24,9 @@ function searchAnime() {
             <div class="anime-info">
             <div>
                 <h2>${title}</h2>
-                <img src="${imageUrl}" alt="Anime Cover">
+                <a href="${youtubeUrl}" target="_blank">
+                    <img src="${imageUrl}" alt="Anime Cover">
+                </a>
                 <p>Rated: ${score}/10</p>
                 <p>Scored by: ${scoredBy} users</p>
                 <p>Popularity: ${popularity}</p>
@@ -61,7 +64,7 @@ function displayTopShows() {
             const resultHtml = topShowsData.map(anime => {
                 const title = anime.titles[0]?.title || 'Title not found';
                 const imageUrl = anime.images?.jpg?.image_url || 'Image not found';
-                const youtubeUrl = anime.trailer?.url || '#'; // Default to '#' if no URL is available
+                const youtubeUrl = anime.trailer?.url || anime.url; // Default to '#' if no URL is available
 
                 return `
                     <div class="anime-info">
