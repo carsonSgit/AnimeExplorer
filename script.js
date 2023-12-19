@@ -61,11 +61,14 @@ function displayTopShows() {
             const resultHtml = topShowsData.map(anime => {
                 const title = anime.titles[0]?.title || 'Title not found';
                 const imageUrl = anime.images?.jpg?.image_url || 'Image not found';
+                const youtubeUrl = anime.trailer?.url || '#'; // Default to '#' if no URL is available
 
                 return `
                     <div class="anime-info">
                         <div>
-                            <img src="${imageUrl}" alt="Anime Cover">
+                            <a href="${youtubeUrl}" target="_blank">
+                                <img src="${imageUrl}" alt="Anime Cover" title="Bring me to the Trailer">
+                            </a>
                             <h2>${title}</h2>
                         </div>
                     </div>
