@@ -30,37 +30,40 @@ label {
     margin-bottom: 1%;
     margin-left: 3%;
     color: #3498db;
+    font-size: 32px;
 }
 
 input {
     display: inline-flex;
     width: 30%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 25px;
     margin-left: 3%;
     border: 1px solid #3498db;
     border-radius: 5px;
+    font-size: 16px;
 }
+
+input::placeholder {
+    font-size: 16px;
+}
+
   
 button {
     display: inline-flex;
-    background-color: #3498db;
     color: #fff;
-    padding: 10px 20px;
+    padding: 24px 26px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-button {
     overflow: hidden;
-    padding: 10px 20px;
     position: relative;
     transition: all .65s;
-    background: #3498dbd1;
+    background: #2978add1;
     border-radius: 5px;
+    font-size: 18px;
 }
+
 button:hover,
 button:focus {
     background-color: #396584;
@@ -137,7 +140,7 @@ button:hover:after {
 }
 
 .anime-info img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.3s;
 }
 
