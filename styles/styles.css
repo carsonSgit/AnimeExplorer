@@ -114,7 +114,6 @@ button:hover:after {
     margin: 10px 0;
 }
 
-
 #result p:first-child {
     margin-top: 2%;
     margin-left: 5%;
@@ -137,6 +136,15 @@ button:hover:after {
     max-width: 50%;
 }
 
+.anime-info img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.anime-info img{
+    transform: scale(1);
+    transition: 0.3s;
+}
 
 #topResultContainer {
     display: inline-flex;
