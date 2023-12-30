@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Kanit";
+    src: url(../font/Kanit-Regular.ttf);
+}
 
 body, h1, p, button, input {
     margin: 0;
@@ -6,7 +10,7 @@ body, h1, p, button, input {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Kanit', sans-serif;
     background-color: #333333;
     color: #fff;
 }
@@ -129,13 +133,13 @@ button:hover:after {
 }
 
 #result h2 {
-    color: #31536a;
+    color: #259ceb;
     justify-content: left;
     margin-right: 30px;
 }
 
 #result p {
-    color: #ffffff;
+    color: #e2e2e2;
     font-size: 16px;
     line-height: 1.9; 
     margin: 10px 0;
