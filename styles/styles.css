@@ -7,8 +7,8 @@ body, h1, p, button, input {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #333333;
+    color: #fff;
 }
 
 .container {
@@ -19,8 +19,8 @@ body {
 
 h1 {
     text-align: center;
-    color: #2c3e50;
-    margin-bottom: 5%;
+    color: #ffffff;
+    margin-bottom: 1%;
     margin-top: 1%;
 }
 
@@ -29,29 +29,38 @@ label {
     align-items: center;
     margin-bottom: 1%;
     margin-left: 3%;
-    color: #3498db;
+    color: #176090;
     font-size: 32px;
 }
 
 input {
     display: inline-flex;
     width: 30%;
-    padding: 25px;
+    padding: 16px 18px;
     margin-left: 3%;
     border: 1px solid #3498db;
     border-radius: 5px;
     font-size: 16px;
+    outline: none;
+    background-color: rgba(105, 105, 105, 0.31);
+    color: #fff;
+    transition: 0.2s;
 }
 
 input::placeholder {
     font-size: 16px;
+    color: #ffffff61;
 }
 
-  
+input:focus {
+    transition: 0.2s;
+    border: 1px solid #256d9c !important;
+}
+
 button {
     display: inline-flex;
     color: #fff;
-    padding: 24px 26px;
+    padding: 16px 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -61,7 +70,7 @@ button {
     transition: all .65s;
     background: #2978add1;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 button:hover,
@@ -98,10 +107,25 @@ button:hover:after {
 
 #result {
     margin-top: 20px;
-    background-color: #ecf0f1;
+    background-color: #5a5a5a67;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    background-repeat: no-repeat;
+    background-position: -120px -120px, 0 0;
+    background: linear-gradient(45deg, #333333, #31536a6b);
+    background-size: 250% 250%, 100% 100%;
+    
+    transition: 0.5s;
+}
+#result:hover {
+    background: linear-gradient(50deg, #333333, #31536a9e);
+    background-position: -60px -60px, 10 10;
+    background-size: 100% 100%, 30% 30%;
+    transition: 0.5s;
 }
 
 #result h2 {
@@ -111,7 +135,7 @@ button:hover:after {
 }
 
 #result p {
-    color: #333;
+    color: #ffffff;
     font-size: 16px;
     line-height: 1.9; 
     margin: 10px 0;
@@ -208,9 +232,7 @@ button:hover:after {
     border-radius: 20px;
 }
 
-
 .navbar {
-    margin-top: 18px;
     margin-left: 42.5%; /* Magic to make navbar Truly centered */
     margin-right: 45%;
     display: flex;
@@ -222,7 +244,7 @@ button:hover:after {
 }
 
 #navBar {
-    background-color: #31536a;
+    background-color: #31536a00;
     padding: 18px;
 }
 
@@ -241,7 +263,7 @@ button:hover:after {
 }
 
 #navBar a {
-    color: #ffffff;
+    color: #040404;
     text-decoration: none;
     font-size: 20px;
     position:relative;
@@ -272,7 +294,7 @@ button:hover:after {
 
 #navBar a#active {
     transition: 0.3s;
-    color: #a0d0f0;
+    color: #0166aa;
 }
 
 
